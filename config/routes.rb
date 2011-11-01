@@ -1,5 +1,6 @@
 Project1::Application.routes.draw do
   resources :users
+  root :to => 'pages#home'
   
   get "users/new"
 
@@ -8,6 +9,6 @@ Project1::Application.routes.draw do
   match '/help',    :to => 'pages#help'
   match '/signup',  :to => 'users#new'
 
-  root :to => 'pages#home'
+  
 
  end
