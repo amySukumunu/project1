@@ -1,10 +1,11 @@
 Project1::Application.routes.draw do
-  get "pages/home"
+  get "users/new"
 
-  get "pages/contact"
-  
-  get "pages/help"
+  match '/contact', :to => 'pages#contact'
+  match '/about',   :to => 'pages#about'
+  match '/help',    :to => 'pages#help'
+  match '/signup',  :to => 'users#new'
 
-  get "pages/about"
+  root :to => 'pages#home'
 
  end
